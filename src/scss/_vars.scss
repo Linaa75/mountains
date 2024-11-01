@@ -1,10 +1,25 @@
-$main-color: #fff;
-$accent-color: green;
-$text-color: #7A66CC;
-$bg-color: #1C1B21;
+$text-2-color: #9D968D;
+$accent-color: #75695E;
+$text-color: #B6C5CA;
+$main-color: #BFB6A6;
+$text-3-color: #363230;
+$bg-color: #191919;
 
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
 $breakpoint-xl: 1440px;
 $breakpoint-xxl: 1920px;
+
+@mixin title-with-icon {
+	font-size: 30px;
+	color: $text-color;
+    padding: 0 0 0 94px;
+    margin: 0 0 60px;
+    letter-spacing: 2px;
+    background: url(/src/img/icons/plan.svg) no-repeat 0/64px 45px;
+
+    @media screen and (min-width: $breakpoint-md) {
+        font-size: 48px;
+    }
+}

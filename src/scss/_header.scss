@@ -1,0 +1,161 @@
+.header {
+    padding: 40px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 0;
+        align-items: center;
+       
+        @media screen and (min-width: $breakpoint-md) {
+            gap: 10px;
+            justify-content: space-evenly;
+        }
+
+        &-logo  {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+        
+            img {
+                width: 223px;
+                height: 60px;
+            }      
+        }
+    
+        &-burger {
+            width: 18px;
+            height: 14px;
+            position: relative;
+            cursor: pointer;
+            margin: 6px 0 0;
+        
+            @media screen and (min-width: $breakpoint-md) {
+              display: none;
+            }
+        
+            &::before,
+            &::after,
+            span {
+              content: "";
+              position: absolute;
+              width: 100%;
+              left: 0;
+              top: 0;
+              height: 2px;
+              background: $bg-color;
+            }
+        
+            &::after {
+              top: auto;
+              bottom: 0;
+            }
+        
+            span {
+              top: 50%;
+              transform: translateY(-50%);
+            }    
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        @media screen and (min-width: $breakpoint-md) {
+            flex-direction: row;
+            gap: 28px;
+        }
+
+        @media screen and (min-width: $breakpoint-lg) {
+            gap: 56px;
+        }
+    }
+
+    &__menu-item a {
+        display: block;
+        width: 100%;
+        color: $bg-color;
+        font-weight: 600;
+        transition: all .3s linear;
+
+        &:hover {
+            background: $accent-color;
+            padding: 10px 50px;
+            border-radius: 10px 0;
+            transition: all .3s linear;
+        }
+
+        @media screen and (min-width: $breakpoint-md) {
+            color: $bg-color;
+            font-size: 18px;
+           
+            &:hover {
+                padding: 0;
+                background: transparent;
+                border-radius: 0;
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+.header__nav {
+    position: fixed;
+    z-index: 20;
+    bottom: -100%;
+    left: 5px;
+    right: 5px;
+    background: $main-color;
+    padding: 12px;
+    border-radius: 50px 0;
+    transition: all 0.3s ease-in-out;
+    
+    &.active {
+        bottom: 0;
+      }
+
+    @media screen and (min-width: $breakpoint-md) {
+        display: block;
+        border-radius: 0;
+        position: static;
+        background: transparent;
+        padding: 0;
+        bottom: -100%;
+    }
+
+    &-close {
+        width: 22px;
+        height: 22px;
+        position: relative;
+        cursor: pointer;
+        margin: 0 0 20px auto;
+        
+        &::before, &::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $accent-color;
+        transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    
+        @media screen and (min-width: $breakpoint-md) {
+            display: none;
+        }
+    }
+}
+
+

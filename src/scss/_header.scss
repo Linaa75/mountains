@@ -7,7 +7,7 @@
 
     &__inner {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         gap: 0;
         align-items: center;
        
@@ -22,7 +22,7 @@
             justify-content: center;
         
             img {
-                width: 223px;
+                width: 60px;
                 height: 60px;
             }      
         }
@@ -84,10 +84,11 @@
         color: $bg-color;
         font-weight: 600;
         transition: all .3s linear;
+        font-size: 20px;
 
         &:hover {
-            background: $accent-color;
-            padding: 10px 50px;
+            background: rgba($text-2-color, 0.7);
+            padding: 7px 100px;
             border-radius: 10px 0;
             transition: all .3s linear;
         }
@@ -112,8 +113,8 @@
     bottom: -100%;
     left: 5px;
     right: 5px;
-    background: $main-color;
-    padding: 12px;
+    background: rgba($text-color, 0.95);
+    padding: 25px 12px;
     border-radius: 50px 0;
     transition: all 0.3s ease-in-out;
     

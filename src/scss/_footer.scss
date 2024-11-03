@@ -18,50 +18,41 @@
 
     &__contact {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 15px;
-        font-size: 16px;
+        font-size: 18px;
+        flex-wrap: wrap;
+        flex: 1 1 100%;
 
-        @media screen and (min-width: $breakpoint-md) {
-            gap: 30px;
-            font-size: 18px;
-        }
-
-        span {
-            margin: 0 10px;
-            @media screen and (min-width: $breakpoint-sm) {
-                display: none;
-            }
+        @media screen and (min-width: $breakpoint-sm) {
+            flex-direction: row;
         }
     }
 
-    &__contact-title {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        font-weight: 600;
-        text-transform: uppercase;
-
-        @media screen and (min-width: $breakpoint-sm) {
-            align-items: flex-end;
-        }
-    }
-
-    &__contact-info {
-        display: none;
-        gap: 10px;
-        font-weight: 400;
-        text-transform: uppercase;
-
-        @media screen and (min-width: $breakpoint-sm) {
+		&__contact-tour, &__contact-email {
+            flex: 1 1 45%;
+            font-weight: 600;
+            text-transform: uppercase;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: flex-end;
+		}
+
+		&__contact-name, &__contact-link {
+            flex: 1 1 45%;
+            font-weight: 400;
+		}
+
+        &__contact-name {
+            padding: 0 0 20px;
+            @media screen and (min-width: $breakpoint-sm) {
+                padding: 0 0 0px;
+            }
         }
 
-        a {
+        &__contact-link {
             color: $main-color;
             transition: all .3s linear;
 
@@ -70,7 +61,6 @@
                 transition: all .3s linear;
             }
         }
-    }
 
     &__icons {
         padding: 0 0 30px;
@@ -103,20 +93,30 @@
                 transition: .3s;
         
                 &:hover {
-                    box-shadow: 0 0 0 8px #4f4c4c;
+                    background: $main-color;
                     transition: .3s;
                 }
 
                 @media screen and (min-width: $breakpoint-sm) {
                     height: 44px;
                     width: 44px;
-                    box-shadow: 0 0 0 8px #2C2C2C;
+                    box-shadow: 0 0 0 8px $bg-color;
                     padding: 8px;
+
+                    &:hover {
+                        box-shadow: 0 0 0 8px $text-3-color;
+                        transition: .3s;
+
+                        svg {
+                            fill: $text-3-color;
+                        }
+                    }
                 }
 
                 svg {
                     height: 24px;
                     width: 24px;
+                    fill: $main-color;
                 }
             }
         }

@@ -1,0 +1,28 @@
+.feedback {
+    &__inner {
+        img {
+            object-fit: cover;
+        }
+    }
+
+    &__inner-item {
+    }
+
+    &__inner-desc {
+        background: rgba($bg-color, 0.7);
+        border-radius: 10px 0;
+        margin: 0px 0 -6px;
+        padding: 5px 3px 30px;
+
+        h5 {
+            color: $main-color;
+            font-size: 35px;
+            padding: 0 0 10px;
+        }
+
+        p {
+            color: $text-color;
+            letter-spacing: 1.2px;
+        }
+    }
+}

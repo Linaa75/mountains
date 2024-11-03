@@ -15,9 +15,9 @@ $breakpoint-xxl: 1920px;
 	font-size: 30px;
 	color: $text-color;
     padding: 0 0 0 94px;
-    margin: 0 0 60px;
+    margin: 0 0 40px;
     letter-spacing: 2px;
-    background: url(/src/img/icons/plan.svg) no-repeat 0/64px 45px;
+    background: url(/src/img/icons/plan.svg) no-repeat 0/64px 40px;
 
     @media screen and (min-width: $breakpoint-md) {
         font-size: 48px;

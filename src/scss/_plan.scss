@@ -1,5 +1,9 @@
 .plan {
-    padding: 0 0 150px;
+    padding: 0 0 100px;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        padding: 0 0 150px;
+    }
 
     &__container {
         display: flex;
@@ -26,15 +30,11 @@
     }
 
     &__box-desc {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 400;
         text-align: justify;
-        color: $text-2-color;
+        color: $main-color;
         margin: 0 0 60px;
-        
-        @media screen and (min-width: $breakpoint-md) {
-            font-size: 20px;
-        }
     }
 
     &__list {
@@ -47,20 +47,33 @@
         @media screen and (min-width: $breakpoint-md) {
             row-gap: 30px;
             column-gap: 40px;
+            justify-content: center;
         }
     }
 
     &__list-item {
         padding: 0 0 0 50px;
         position: relative;
-        flex: 1 1 40%;
-
+        flex: 1 1 70%;
+        transition: all .5s linear;
         a {
-           color: $text-2-color;
+            color: $main-color;
+            display: inline-block;
         }
+
+        &:hover {
+            border-radius: 10px 0;
+            background: $text-color;
+            transition: all .5s linear;
+
+            a {
+                color: $text-3-color;
+            }
+        } 
 
         @media screen and (min-width: $breakpoint-sm) {
             padding: 3px 0 3px 50px;
+            flex: 1 1 40%;
         }
 
         &::before {
@@ -68,7 +81,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background: $accent-color;
+            background: $text-color;
             border-radius: 10px 0;
             height: 30px;
             width: 30px;

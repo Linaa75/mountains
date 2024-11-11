@@ -14,15 +14,16 @@
         margin: 0px 0 -6px;
         padding: 5px 3px 30px;
 
-        h5 {
+        &-name {
             color: $main-color;
             font-size: 35px;
             padding: 0 0 10px;
         }
 
-        p {
+        &-text {
             color: $text-color;
             letter-spacing: 1.2px;
+            font-weight: 400;
         }
     }
 }
